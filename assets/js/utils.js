@@ -21,6 +21,7 @@ export class Producto {
         const jpg = document.createElement('img')
         const titulo = document.createElement('p')
         jpg.src = this.imagen;
+        jpg.classList.add("imagen")
         titulo.innerHTML = this.title;
 
         div.appendChild(jpg);
