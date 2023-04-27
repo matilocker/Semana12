@@ -8,24 +8,34 @@ export const traerTienda = async () => {
 
 //class producto
 export class Producto {
-    imagen = ""
-    title = ""
+    imagen = "";
+    title = "";
+    id = "";
 
-    constructor(image, title) {
+    constructor(image, title, id) {
         this.imagen = image;
         this.title = title;
+        this.id = id;
     }
 
     render() {
-        const div = document.createElement('div')
-        const jpg = document.createElement('img')
-        const titulo = document.createElement('p')
+        const div = document.createElement('div');
+        const jpg = document.createElement('img');
+        const titulo = document.createElement('p');
+        jpg.id = "image"+this.id;
         jpg.src = this.imagen;
-        jpg.classList.add("imagen")
+        jpg.classList.add("imagen");
         titulo.innerHTML = this.title;
 
         div.appendChild(jpg);
         div.appendChild(titulo);
         return div;
-    }
+    };
+
+    addClickListener() {
+        const image = document.querySelector("#image"+this.id);
+        image.addEventListener("click", () => {
+            window.location = "/product.html?productId="+this.id;
+        });
+    };
 }
