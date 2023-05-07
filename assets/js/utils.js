@@ -22,6 +22,7 @@ export class Producto {
         const div = document.createElement('div');
         const jpg = document.createElement('img');
         const titulo = document.createElement('p');
+        div.classList.add("product");
         jpg.id = "image"+this.id;
         jpg.src = this.imagen;
         jpg.classList.add("imagen");
@@ -31,11 +32,16 @@ export class Producto {
         div.appendChild(titulo);
         return div;
     };
-
+   
     addClickListener() {
         const image = document.querySelector("#image"+this.id);
         image.addEventListener("click", () => {
             window.location = "/product.html?productId="+this.id;
+            const div = document.queryselector(".producto");
+            const jpg = document.createElement("img");
+            jpg.src = ropa.image;
+    
+            div.appendChild(jpg);
         });
     };
-}
+};

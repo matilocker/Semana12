@@ -1,4 +1,35 @@
 
+body{
+background-color: gray;
+} 
+
 .imagen{
     width: 20vw;
+}
+
+.titulo {
+    background-color: rgb(22, 22, 22);
+    padding: 20px;
+}
+
+.title {
+    color: aliceblue;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    background-color: white;
+    margin: 10px;
+    width: 20vw;
+    height: 80vh;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
