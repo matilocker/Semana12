@@ -37,11 +37,6 @@ export class Producto {
         const image = document.querySelector("#image"+this.id);
         image.addEventListener("click", () => {
             window.location = "/product.html?productId="+this.id;
-            const div = document.queryselector(".producto");
-            const jpg = document.createElement("img");
-            jpg.src = ropa.image;
-    
-            div.appendChild(jpg);
         });
     };
 };
